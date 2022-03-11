@@ -20,7 +20,7 @@ form.onsubmit =(e)=>{
 }
 
 const getIpData = (ipAddress)=>{
-    fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_RRCIwZGYIT4rEO3r7yZghMQ9WzCcG&ipAddress=${ipAddress}`)
+    fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_RRCIwZGYIT4rEO3r7yZghMQ9WzCcG&ipAddress=${ipAddress}&domain=${ipAddress}`)
     .then( res => res.json())
     .then( data => {
         setMap(data.location.lng,data.location.lat)
@@ -38,7 +38,7 @@ const setMap = (lng,lat)=>{
     container: 'map', // container ID
     style: 'mapbox://styles/mapbox/streets-v11', // style URL
     center: [lng, lat], // starting position [lng, lat]
-    zoom: 13 // starting zoom
+    zoom: window.innerWidth>650 ?13:10 // starting zoom
     });
 }
 const setPageData = (data)=>{

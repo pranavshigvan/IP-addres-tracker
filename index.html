@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css' rel='stylesheet' />
+  <link rel="stylesheet" href="./style.css">
+  <title>IP Address Tracker</title>
+</head>
+<body>
+  <header>
+    <h1>IP Address Tracker</h1>
+    <form id="form">
+      <input type="text" placeholder="Search for any IP address or domain" id="ip_input">
+      <button type="submit"><img src="./images/icon-arrow.svg" alt=""></button>
+    </form>
+    <div class="info">
+      <div>
+        <h4>IP Address</h4>
+        <h2 id="ip"></h2>
+      </div>
+      <div>
+        <h4>Location</h4>
+        <h2 id="location"></h2>
+      </div>
+      <div>
+        <h4>Timezone</h4>
+        <h2 id="timezone"></h2>
+      </div>
+      <div>
+        <h4>ISP</h4>
+        <h2 id="isp">.</h2>
+      </div>
+    </div>
+  </header>
+  <section id="map">
+
+  </section>
+  <script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+  <script src="./index.js"></script>
+</body>
+</html>

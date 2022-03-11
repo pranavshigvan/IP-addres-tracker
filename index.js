@@ -6,10 +6,6 @@ const timezone = document.getElementById("timezone")
 const isp = document.getElementById("isp")
 
 
-// $.getJSON("https://api.ipify.org?format=json", function(data) {
-//         getIpData(data.ip)
-//     })
-
 const setDefault = ()=>{
     fetch("https://api.ipify.org?format=json")
     .then( res => res.json())
@@ -29,6 +25,7 @@ const getIpData = (ipAddress)=>{
     .then( data => {
         setMap(data.location.lng,data.location.lat)
         setPageData(data)
+        form.className = ""
     })
     .catch( error => {
         form.className = "error"

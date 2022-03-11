@@ -32,20 +32,22 @@ form {
     height: 50px;
     border-radius: 10px;
     display: flex;
+    z-index: 1000;
 }
 form span {
     position: absolute;
     top: 110%;
     color: red;
     z-index: 2000;
+    display: none;
 }
 form.error {
     border: 1px solid red;
 
 }
-/* form.error span {
+form.error span {
     display: inline;
-} */
+}
 form input {
     flex-grow: 1;
     height: 100%;

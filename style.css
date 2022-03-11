@@ -31,14 +31,28 @@ form {
     margin: auto;
     height: 50px;
     border-radius: 10px;
-    overflow: hidden;
     display: flex;
 }
+form span {
+    position: absolute;
+    top: 110%;
+    color: red;
+    z-index: 2000;
+}
+form.error {
+    border: 1px solid red;
+
+}
+/* form.error span {
+    display: inline;
+} */
 form input {
     flex-grow: 1;
     height: 100%;
     padding: 10px ;
     font-size: 16px;
+    border-radius: 10px 0 0 10px;
+    background-color: white;
 }
 form button {
     width: 50px;
@@ -46,6 +60,7 @@ form button {
     border: none;
     background-color: hsl(0, 0%, 17%);
     cursor: pointer;
+    border-radius: 0 10px 10px 0;
 }
 .info {
     width: 75vw;

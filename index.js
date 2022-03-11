@@ -30,6 +30,9 @@ const getIpData = (ipAddress)=>{
         setMap(data.location.lng,data.location.lat)
         setPageData(data)
     })
+    .catch( error => {
+        form.className = "error"
+    })
 }
 
 const setMap = (lng,lat)=>{
